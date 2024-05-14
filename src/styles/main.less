@@ -1,16 +1,8 @@
-@fontePrincipal: "Roboto", sans-serif;
-@fonteTitulos: "Bebas Neue", sans-serif;;
+@import "config/reset.less";
+@import "config/variaveis.less";
+@mobileBreakpoint: ~"(max-width: 767px)"; // escaping
+@tabletBreakpoint: ~"(min-width: 768px) and (max-width: 1023px)"; // escaping
 
-@corDefundo: rgb(0, 26, 255);
-@corDotexto: white;
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: @fontePrincipal;
-}
 
 main {
     max-width: 960px;
@@ -29,10 +21,9 @@ body {
     margin-top: 100px;
     background-color: @corDefundo;
     color: @corDotexto;
-
 }
 
-.article {
+p {
     margin: 80px auto;
 }
 
@@ -49,13 +40,13 @@ button {
     color: @corDotexto;
 
     .material-symbols-outlined {
-        font-size: 40px;
-        margin: 0 10px;
+        font-size: 1em;
+        margin: auto 10px;
     }
 }
 
 .resultado {
-    margin-top: 120px;
+    margin-top: 80px;
     padding: 16px;
     border: 8px dotted #fff;
     display: none;
@@ -70,4 +61,23 @@ button {
 .numeros-sorteados {
     display: flex;
     justify-content: center;
+}
+
+@media @mobileBreakpoint {
+    main {
+        width: 90%;
+        font-size: .9em;
+    }
+    p {
+        margin: 50px auto;
+    }
+    .resultado {
+        margin-top: 50px;
+    }
+}
+
+@media @tabletBreakpoint {
+    main {
+        width: 90%;
+    }
 }
