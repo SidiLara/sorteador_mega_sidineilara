@@ -1,0 +1,73 @@
+@fontePrincipal: "Roboto", sans-serif;
+@fonteTitulos: "Bebas Neue", sans-serif;;
+
+@corDefundo: rgb(0, 26, 255);
+@corDotexto: white;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: @fontePrincipal;
+}
+
+main {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 2em;
+    text-align: center;
+}
+
+h1 {
+    font-family: @fonteTitulos;
+    text-transform: uppercase;
+}
+
+body {
+    margin-top: 100px;
+    background-color: @corDefundo;
+    color: @corDotexto;
+
+}
+
+.article {
+    margin: 80px auto;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.3em;
+    border-radius: 15px;
+    margin: 0 auto;
+    background-color: orange;
+    color: @corDotexto;
+
+    .material-symbols-outlined {
+        font-size: 40px;
+        margin: 0 10px;
+    }
+}
+
+.resultado {
+    margin-top: 120px;
+    padding: 16px;
+    border: 8px dotted #fff;
+    display: none;
+
+    .numeros-sorteados {
+        font-weight: bold;
+        font-size: 2em;
+        display: block;
+    }
+}
+
+.numeros-sorteados {
+    display: flex;
+    justify-content: center;
+}
